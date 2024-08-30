@@ -1,7 +1,7 @@
 import os
 import zipfile
 from PyPDF2 import PdfReader
-from constants import EXTRACT_TO
+from config import EXTRACT_TO
 
 
 def extractZip(zipPath):
@@ -26,7 +26,7 @@ def readFromText(textPath):
     return {"content":text}
 
 def extractTextFromFiles(filepath,filetype):
-    print(filetype)
+    # print(filetype)
     if(filetype==".pdf"):
         data = readFromPDF(filepath)
         return data
